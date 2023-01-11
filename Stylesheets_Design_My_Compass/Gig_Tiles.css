@@ -1,0 +1,77 @@
+
+.Gig_Tiles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --Border_Radius_Factor: 0.05;
+  --Shadow_Height: 0.03;
+  --Shadow_Blur: 0.5;
+  --Shadow_Spread: 0.1;
+  --Highlight_Height: 0.001;
+  --Highlight_Blur: 0.001;
+  --Highlight_Spread: 0;
+  --Maximum_Size: 24rem;
+  --Minimum_Size: 22rem;
+  height: var(--Tile_Width);
+  width: var(--Tile_Width);
+  border-radius: calc(var(--Border_Radius_Factor) * var(--Tile_Width));
+  max-width: var(--Maximum_Size);
+  max-height: var(--Maximum_Size);
+  min-width: var(--Minimum_Size);
+  min-height: var(--Minimum_Size);
+  margin: var(--Tile_Margin);
+  box-shadow: 0 0 calc(var(--Shadow_Blur)*var(--Tile_Width)) calc(var(--Shadow_Spread)*var(--Tile_Width)) rgba(20, 41, 81, 1),
+  0 1rem 1.2rem 0.2rem rgba(0,0,0,0.8);
+  text-decoration: none;
+  border: calc(0.007*var(--Tile_Width)) solid rgba(255,255,255,0.05);
+  background-color: rgb(60,60,60);
+  overflow: hidden;
+  background-color: rgba(14, 22, 43, 1);
+  border-radius: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  @media screen and (orientation:landscape){
+    .Gig_Tiles{
+      box-shadow: none;
+    }
+  }
+  
+  @media screen and (orientation:portrait){
+  .Gig_Tiles{
+    max-height: 80vw;
+    max-width: 80vw;
+    box-shadow: none;
+    font-size: 3vw;
+    border-radius: 3vw;
+  }
+
+  .Button_Links{
+    font-size: 3vw;
+  }
+     
+  .Button_Containers .Button_Links:nth-child(1){
+    --Border_Radius_Factor: 0.03;
+    border-radius: 3vw;
+    background-color: rgba(248, 144, 19, 1);
+    color: white;
+  }         
+  }
+}
+
+#Gig_3{
+  position: relative;
+  z-index: 50;
+}
+
+.Button_Pressed{
+    animation: Squeeze_Keyframes 0.15s ease-out forwards;
+  }
+  
+  @keyframes Squeeze_Keyframes{
+    0%{transform: translateY(0px) scale(1);}
+    50%{transform: translateY(0px) scale(1.1);}
+    100%{transform: translateY(0px) scale(1);}
+  }
+  

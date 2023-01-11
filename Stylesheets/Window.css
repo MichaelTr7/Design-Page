@@ -1,0 +1,48 @@
+
+html{
+  height: 100vh;
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  font-weight: bold;
+  background-color: #244992;
+  font-size: calc(0.03*var(--Size));
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(180deg, #244992 0%, #00E1E1 97.4%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#Background{
+  --Width: 200vw;
+  position: fixed;
+  height: calc(100vh + 20px);
+  width: var(--Width);
+  left: calc(50% - var(--Width)/2);
+  background-repeat: no-repeat;
+  background-size: 200vw 100vh;
+  background-position: center;
+  margin: 0;
+}
+
+#Background_2{
+  position: absolute;
+  top:0;
+  background-color: none;
+  --Constraining_Dimension: 100vw;  
+  --Minimum_Length: max(var(--Constraining_Dimension),200px);
+  --Size: min(calc(var(--Minimum_Length) - 2 * var(--Margin)),var(--Absolute_Maximum_Size));
+  height: calc(var(--Size) + 2 * var(--Margin));
+  width: calc(var(--Size) + 2 * var(--Margin));
+  z-index: 2;
+}
+
+
+

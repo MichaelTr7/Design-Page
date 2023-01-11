@@ -1,0 +1,63 @@
+
+@keyframes Fade_In_Keyframes{
+  0%{transform: translateY(100vh) scale(0.5); filter: opacity(0);}
+  50%{transform: translateY(0vh) scale(0.5); filter: opacity(0.5);}
+  100%{transform: translateY(0vh) scale(1); filter: opacity(1);}
+}
+
+@keyframes Twist_Fade_In_Keyframes {
+  0%{transform: rotate(380deg) scale(0.9); filter: opacity(0);}
+  50%{transform: rotate(0deg) scale(0.9);}
+  70%{transform: rotate(0deg) scale(1.02);}
+  100%{transform: rotate(0deg) scale(1); filter: opacity(1);}  
+}
+
+@keyframes Simple_Fade_In_Keyframes {
+  0%{transform: scale(0.7); filter: opacity(0);}
+  100%{transform: scale(1); filter: opacity(1);}  
+}
+
+@keyframes Simple_Fade_In_Page {
+  0%{opacity:0;}
+  100%{opacity:1;}  
+}
+
+@keyframes Transition_Background_Color {
+  0%{background-color: #FFFFFF;}
+  100%{background-color: #244992;}  
+}
+
+.Button_Pressed{
+    animation: Squeeze_Keyframes 0.15s ease-out forwards;
+  }
+  
+  @keyframes Squeeze_Keyframes{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.05);}
+    100%{transform: scale(1);}
+  }
+  
+  .Scale_Level_0{
+    transform: scale(1.2);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
